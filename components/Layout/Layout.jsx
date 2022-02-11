@@ -5,9 +5,10 @@ import Sidebar from "./Navbar/Sidebar";
 function Layout({ children }) {
   return (
     <>
-      <div className="bg-[url('https://picsum.photos/1200')] bg-no-repeat bg-cover bg-center">
-        <Navbar />
-
+      <div className="bg-[url('https://picsum.photos/1200')] bg-no-repeat bg-cover bg-center absolute w-full">
+        <div className="relative mt-10 mb-10 ">
+          <Navbar />
+        </div>
         <main>{children}</main>
       </div>
     </>

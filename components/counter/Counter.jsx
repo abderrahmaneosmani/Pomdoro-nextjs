@@ -49,13 +49,13 @@ function Counter() {
     <div className="bg-transparent z-0">
       <div className="flex justify-center items-center m-2 text-white   shadow-sm opacity-90">
         <div className="text-9xl  sm:text-15xl font-mono text-center z-10  ">
-          {min}
+          {min < 10 ? `0${min}` : min}
         </div>
         <div className="text-9xl  sm:text-15xl font-mono text-center z-10 ">
           :
         </div>
         <div className="text-9xl   sm:text-15xl  font-mono text-center z-10 ">
-          {sec}
+          {sec < 10 ? `0${sec}` : sec}
         </div>
       </div>
 
@@ -68,7 +68,7 @@ function Counter() {
             Play
           </button>
           <button
-            onClick={resetTimer}
+            onClick={() => resetTimer(index)}
             className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mx-6 my-6"
           >
             Rest
