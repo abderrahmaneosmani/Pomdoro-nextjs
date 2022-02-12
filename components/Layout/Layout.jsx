@@ -1,7 +1,5 @@
-import Sider from "antd/lib/layout/Sider";
 import React, { Fragment } from "react";
 import Navbar from "./Navbar/Navbar";
-import Sidebar from "./Navbar/Sidebar";
 function Layout({ children }) {
   return (
     <>

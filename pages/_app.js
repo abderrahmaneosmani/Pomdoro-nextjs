@@ -1,8 +1,7 @@
 import "../styles/globals.css";
-import AuthContextProvider from "../contexts/AuthContext";
 
 import Layout from "../components/Layout/Layout";
-import { CounterProvider } from "../contexts/CounterContex";
+import { CounterProvider } from "../contexts/CounterContext";
 function MyApp({ Component, pageProps }) {
   return (
     <CounterProvider>

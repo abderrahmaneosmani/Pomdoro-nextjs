@@ -5,7 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Sidebar from "./Sidebar";
 import { useContext } from "react";
 
-import { CounterContext } from "../../../contexts/CounterContex";
+import { CounterContext } from "../../../contexts/CounterContext";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -43,7 +43,7 @@ export default function Example() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center space-x-9 ">
+      <div className="flex  sm:justify-center items-center space-x-9 ">
         <button
           onClick={handlePomodoro}
           type="button"

@@ -1,10 +1,22 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CounterContext } from "../../contexts/CounterContex";
+import { CounterContext } from "../../contexts/CounterContext";
+import Quote from "../quote/Quote";
+const data = require("../../components/quote/quotes.json");
 
 function Counter() {
+  const [quoteIndex, setQuoteIndex] = useState(1);
+
   const { min, index, handleMin, sec, handleSec } = useContext(CounterContext);
   const [start, setStart] = useState(false);
   const [play, setPlay] = useState("Play");
+
+  useEffect(() => {
+    const timeQuotes = 1000 * 60 * 5;
+    let interval;
+    interval = setInterval(() => {
+      setQuoteIndex(quoteIndex + 1);
+    }, timeQuotes);
+  });
 
   useEffect(() => {
     let interval;
@@ -78,6 +90,8 @@ function Counter() {
           </button>
         </div>
       </div>
+
+      <Quote data={data[quoteIndex]} />
     </div>
   );
 }
