@@ -37,7 +37,7 @@ export default function Example() {
   };
   return (
     <div className="bg bg-transparent">
-      <div className="absolute">
+      <div className="">
         <div className="m-20 sm:m-0">
           <Sidebar />
         </div>
